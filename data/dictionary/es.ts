@@ -26,42 +26,34 @@ export const es: Dictionary = {
       "Recuperamos la limpieza y el aspecto de tu vehículo con atención a cada detalle.",
     ctaPrimary: "Reservar por WhatsApp",
     ctaSecondary: "Conoce nuestro trabajo",
-    photoLabel: "Foto real: lavado con espuma",
+    photoLabel: "Lavado con espuma en proceso",
   },
   about: {
     title: "Cuidamos tu auto por dentro y por fuera.",
     body: "OPZ AUTO CARE es un negocio de limpieza de vehículos en Pilares Verdes, Las Cabras. Lavamos el exterior, limpiamos el interior y la tapicería, y devolvemos el aspecto de tu vehículo. Para reservar, escríbenos por WhatsApp.",
-    photoLabel: "Foto real: trabajo en un vehículo",
+    photoLabel: "Limpieza completa del vehículo",
   },
   services: {
-    title: "Lo que hacemos",
-    items: [
-      {
-        title: "Lavado exterior",
-        body: "Lavado con espuma y agua a presión, con limpieza de llantas y neumáticos incluida.",
-        photoLabel: "Foto: exterior",
-        slot: "s1",
-      },
-      {
-        title: "Limpieza interior",
-        body: "Aspirado, limpieza del tablero y las superficies, y de alfombras y tapetes.",
-        photoLabel: "Foto: interior",
-        slot: "s2",
-      },
-      {
-        title: "Limpieza de tapicería",
-        body: "Limpieza de asientos y tapizados para devolverles su aspecto.",
-        photoLabel: "Foto: tapicería",
-        slot: "s3",
-      },
-    ],
+    title: "Precios OPZ AUTO CARE",
+    columns: {
+      service: "Servicio",
+      auto: "Auto",
+      suv: "SUV / Camioneta",
+    },
+    items: {
+      exterior: "Lavado exterior",
+      interior: "Lavado interior",
+      full: "Lavado full",
+      upholstery: "Limpieza de tapicería",
+      fullUpholstery: "Full + tapicería",
+    },
   },
   work: {
     title: "Nuestro trabajo",
     prev: "Anterior",
     next: "Siguiente",
     galleryLabel: "Galería de trabajos, desplázate horizontalmente",
-    photoLabel: "Foto real",
+    photoLabel: "Trabajo real de OPZ AUTO CARE",
   },
   contact: {
     title: "Es momento de darle a tu auto el cuidado que merece.",
@@ -72,6 +64,8 @@ export const es: Dictionary = {
     bookingLabel: "Reservas",
     bookingValue: "WhatsApp",
     socialLabel: "Instagram",
+    mapLabel: "Mapa de OPZ AUTO CARE en Pilares Verdes, Las Cabras, Chile",
+    mapOpen: "Abrir ubicación en Google Maps",
   },
   footer: {
     blurb:

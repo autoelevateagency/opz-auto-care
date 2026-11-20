@@ -1,28 +1,42 @@
-import type { PhotoSlotId } from "@/data/site";
+import type { MediaSlotId } from "@/data/site";
 import { siteConfig } from "@/data/site";
 import "./photo-slot.css";
 
 type PhotoSlotProps = {
-  slot: PhotoSlotId;
+  slot: MediaSlotId;
   label: string;
   className?: string;
+  priority?: boolean;
 };
 
 export const PhotoSlot = ({
   slot,
   label,
   className = "",
+  priority = false,
 }: PhotoSlotProps): React.JSX.Element => {
-  const src = siteConfig.photos[slot];
+  const media = siteConfig.media[slot];
   const classes = ["ph", className].filter(Boolean).join(" ");
 
   return (
     <div className={classes} data-slot={slot}>
-      {src ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img src={src} alt="" loading="lazy" />
+      {media.kind === "video" ? (
+        <video
+          src={media.src}
+          aria-label={label}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload={priority ? "auto" : "metadata"}
+        />
       ) : (
-        <span>{label}</span>
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={media.src}
+          alt={label}
+          loading={priority ? "eager" : "lazy"}
+        />
       )}
     </div>
   );

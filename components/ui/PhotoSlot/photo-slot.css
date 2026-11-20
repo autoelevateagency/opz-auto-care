@@ -18,10 +18,15 @@
   padding: 0.8rem 1rem;
 }
 
-.ph img {
+.ph img,
+.ph video {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.ph video {
+  pointer-events: none;
 }

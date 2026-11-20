@@ -33,12 +33,15 @@ export type Dictionary = {
   };
   services: {
     title: string;
-    items: Array<{
-      title: string;
-      body: string;
-      photoLabel: string;
-      slot: "s1" | "s2" | "s3";
-    }>;
+    columns: {
+      service: string;
+      auto: string;
+      suv: string;
+    };
+    items: Record<
+      "exterior" | "interior" | "full" | "upholstery" | "fullUpholstery",
+      string
+    >;
   };
   work: {
     title: string;
@@ -56,6 +59,8 @@ export type Dictionary = {
     bookingLabel: string;
     bookingValue: string;
     socialLabel: string;
+    mapLabel: string;
+    mapOpen: string;
   };
   footer: {
     blurb: string;

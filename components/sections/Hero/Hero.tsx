@@ -28,7 +28,12 @@ export const Hero = ({ dict, bookMessage }: HeroProps): React.JSX.Element => {
             </a>
           </div>
         </div>
-        <PhotoSlot slot="hero" label={dict.photoLabel} className="hero-img" />
+        <PhotoSlot
+          slot="hero"
+          label={dict.photoLabel}
+          className="hero-img"
+          priority
+        />
       </div>
     </header>
   );

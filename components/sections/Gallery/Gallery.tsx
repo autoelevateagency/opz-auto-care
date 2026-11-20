@@ -2,11 +2,11 @@
 
 import { useRef } from "react";
 import type { Dictionary } from "@/data/dictionary";
-import type { PhotoSlotId } from "@/data/site";
+import type { MediaSlotId } from "@/data/site";
 import { PhotoSlot } from "@/components/ui/PhotoSlot/PhotoSlot";
 import "./gallery.css";
 
-const FIGURES: Array<{ slot: PhotoSlotId; className: string }> = [
+const FIGURES: Array<{ slot: MediaSlotId; className: string }> = [
   { slot: "g1", className: "f1" },
   { slot: "g2", className: "f2" },
   { slot: "g3", className: "f3" },

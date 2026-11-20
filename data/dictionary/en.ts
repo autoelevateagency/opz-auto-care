@@ -26,42 +26,34 @@ export const en: Dictionary = {
       "We restore your vehicle’s cleanliness and look with attention to every detail.",
     ctaPrimary: "Book on WhatsApp",
     ctaSecondary: "See our work",
-    photoLabel: "Real photo: foam wash",
+    photoLabel: "Foam wash in progress",
   },
   about: {
     title: "We care for your car inside and out.",
     body: "OPZ AUTO CARE is a vehicle cleaning business in Pilares Verdes, Las Cabras. We wash the exterior, clean the interior and upholstery, and restore your vehicle’s look. To book, message us on WhatsApp.",
-    photoLabel: "Real photo: work on a vehicle",
+    photoLabel: "Full vehicle cleaning",
   },
   services: {
-    title: "What we do",
-    items: [
-      {
-        title: "Exterior wash",
-        body: "Foam and pressure wash, including wheels and tires.",
-        photoLabel: "Photo: exterior",
-        slot: "s1",
-      },
-      {
-        title: "Interior clean",
-        body: "Vacuuming, dash and surfaces, carpets and mats.",
-        photoLabel: "Photo: interior",
-        slot: "s2",
-      },
-      {
-        title: "Upholstery clean",
-        body: "Seat and fabric cleaning to restore their look.",
-        photoLabel: "Photo: upholstery",
-        slot: "s3",
-      },
-    ],
+    title: "OPZ AUTO CARE prices",
+    columns: {
+      service: "Service",
+      auto: "Car",
+      suv: "SUV / Truck",
+    },
+    items: {
+      exterior: "Exterior wash",
+      interior: "Interior wash",
+      full: "Full wash",
+      upholstery: "Upholstery clean",
+      fullUpholstery: "Full + upholstery",
+    },
   },
   work: {
     title: "Our work",
     prev: "Previous",
     next: "Next",
     galleryLabel: "Work gallery, scroll horizontally",
-    photoLabel: "Real photo",
+    photoLabel: "Real OPZ AUTO CARE work",
   },
   contact: {
     title: "It’s time to give your car the care it deserves.",
@@ -72,6 +64,8 @@ export const en: Dictionary = {
     bookingLabel: "Bookings",
     bookingValue: "WhatsApp",
     socialLabel: "Instagram",
+    mapLabel: "Map of OPZ AUTO CARE in Pilares Verdes, Las Cabras, Chile",
+    mapOpen: "Open location in Google Maps",
   },
   footer: {
     blurb:

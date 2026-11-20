@@ -1,5 +1,5 @@
 import type { Dictionary } from "@/data/dictionary";
-import { PhotoSlot } from "@/components/ui/PhotoSlot/PhotoSlot";
+import { formatPriceRange, pricingItems } from "@/data/pricing";
 import "./services.css";
 
 type ServicesProps = {
@@ -11,15 +11,34 @@ export const Services = ({ dict }: ServicesProps): React.JSX.Element => {
     <section id="servicios">
       <div className="wrap">
         <h2>{dict.title}</h2>
-        {dict.items.map((item) => (
-          <article className="svc" key={item.slot}>
-            <div>
-              <h3>{item.title}</h3>
-              <p>{item.body}</p>
-            </div>
-            <PhotoSlot slot={item.slot} label={item.photoLabel} />
-          </article>
-        ))}
+        <div className="price-table" role="table" aria-label={dict.title}>
+          <div className="price-head" role="row">
+            <span role="columnheader">{dict.columns.service}</span>
+            <span role="columnheader">{dict.columns.auto}</span>
+            <span role="columnheader">{dict.columns.suv}</span>
+          </div>
+          {pricingItems.map((item) => (
+            <article className="price-row" role="row" key={item.id}>
+              <h3 role="cell">{dict.items[item.id]}</h3>
+              <p role="cell" data-label={dict.columns.auto}>
+                <span className="price-from">{item.auto.from}</span>
+                <span className="price-sep" aria-hidden="true">
+                  —
+                </span>
+                <span className="price-to">{item.auto.to}</span>
+                <span className="sr-only">{formatPriceRange(item.auto)}</span>
+              </p>
+              <p role="cell" data-label={dict.columns.suv}>
+                <span className="price-from">{item.suv.from}</span>
+                <span className="price-sep" aria-hidden="true">
+                  —
+                </span>
+                <span className="price-to">{item.suv.to}</span>
+                <span className="sr-only">{formatPriceRange(item.suv)}</span>
+              </p>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );
