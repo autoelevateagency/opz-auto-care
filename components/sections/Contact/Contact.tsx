@@ -60,9 +60,6 @@ export const Contact = ({
             referrerPolicy="no-referrer-when-downgrade"
             allowFullScreen
           />
-          <div className="contact-map__marker" aria-hidden="true">
-            <span className="contact-map__pin" />
-          </div>
         </div>
         <a
           className="contact-map__link"
