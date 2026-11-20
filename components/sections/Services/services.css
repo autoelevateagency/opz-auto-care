@@ -1,0 +1,66 @@
+#servicios {
+  background: var(--carbon);
+  padding: clamp(5rem, 10vw, 9rem) 0;
+}
+
+#servicios h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 500;
+  color: var(--silver);
+  margin-bottom: 3rem;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.svc {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  align-items: center;
+  gap: 2rem;
+  border-top: 1px solid rgba(220, 227, 234, 0.2);
+  padding: 2rem 0;
+  transition: padding 0.3s;
+}
+
+.svc:last-child {
+  border-bottom: 1px solid rgba(220, 227, 234, 0.2);
+}
+
+.svc h3 {
+  font-size: clamp(2.2rem, 6.5vw, 5.8rem);
+  font-weight: 700;
+  transition: color 0.25s, transform 0.3s;
+}
+
+.svc p {
+  max-width: 48ch;
+  color: var(--silver);
+  margin: 1rem 0 0;
+}
+
+.svc .ph {
+  aspect-ratio: 4 / 3;
+  opacity: 0.55;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.svc:hover h3,
+.svc:focus-within h3 {
+  color: var(--cyan);
+  transform: translateX(0.6rem);
+}
+
+.svc:hover .ph {
+  opacity: 1;
+}
+
+@media (max-width: 760px) {
+  .svc {
+    grid-template-columns: 1fr;
+  }
+
+  .svc .ph {
+    order: -1;
+    aspect-ratio: 16 / 9;
+  }
+}

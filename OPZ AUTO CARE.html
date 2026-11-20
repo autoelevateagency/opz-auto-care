@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>OPZ AUTO CARE | Lavado de autos en Las Cabras</title>
+<meta name="description" content="OPZ AUTO CARE: lavado interior y exterior, limpieza de tapicería y llantas en Pilares Verdes, Las Cabras, Chile. Reserva por WhatsApp.">
+<meta property="og:title" content="OPZ AUTO CARE | Lavado de autos en Las Cabras">
+<meta property="og:description" content="Devolvemos el aspecto de tu vehículo. Reserva por WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--mid:#080B10;--carbon:#111820;--black:#050607;--blue:#087FF5;--cyan:#04B9F5;--white:#F4F6F8;--silver:#DCE3EA;
+--hf:"Space Grotesk",system-ui,sans-serif;--bf:Inter,system-ui,sans-serif;box-sizing:border-box;
+padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:72px;height:auto}
+body{margin:0;background:var(--black);color:var(--white);font:400 1.0625rem/1.6 var(--bf);-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--hf);margin:0;line-height:.95;letter-spacing:-.02em;text-transform:uppercase}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}
+.wrap{padding:0 clamp(1.25rem,5vw,4rem);max-width:1400px;margin:0 auto}
+.btn{display:inline-block;font:700 .95rem var(--hf);letter-spacing:.04em;text-transform:uppercase;text-decoration:none;padding:1rem 1.6rem;border:2px solid var(--blue);background:var(--blue);color:#fff;border-radius:2px;transition:background .2s,color .2s,transform .2s}
+.btn:hover{background:#fff;color:var(--mid);border-color:#fff}
+.btn.ghost{background:transparent;border-color:rgba(244,246,248,.4)}
+.btn.ghost:hover{border-color:#fff;background:#fff;color:var(--mid)}
+/* placeholder photo slots */
+.ph{position:relative;background:var(--carbon) repeating-linear-gradient(115deg,transparent 0 22px,rgba(8,127,245,.07) 22px 23px);display:flex;align-items:flex-end;overflow:hidden}
+.ph span{font:500 .75rem var(--bf);color:var(--silver);opacity:.75;padding:.8rem 1rem}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(5,6,7,.92);padding-top:env(safe-area-inset-top,0px);border-bottom:1px solid rgba(220,227,234,.1)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{font:700 1.5rem var(--hf);letter-spacing:.02em;text-decoration:none;display:flex;align-items:baseline;gap:.5rem}
+.logo b{color:var(--blue)}
+.logo small{font:500 .6rem var(--hf);letter-spacing:.3em;color:var(--silver)}
+.links{display:flex;gap:2rem;align-items:center}
+.links a{text-decoration:none;font-size:.95rem;color:var(--silver);transition:color .2s}
+.links a:hover{color:#fff}
+.links .btn{padding:.65rem 1.1rem;font-size:.8rem;color:#fff}
+.burger{display:none;background:none;border:0;color:#fff;width:44px;height:44px;cursor:pointer}
+.burger i{display:block;height:2px;background:#fff;margin:6px 10px}
+@media(max-width:860px){.burger{display:block}
+.links{display:none;position:absolute;top:100%;left:0;right:0;background:var(--black);flex-direction:column;align-items:flex-start;padding:1.5rem clamp(1.25rem,5vw,4rem) 2rem;gap:1.2rem}
+.links.open{display:flex}.links a{font-size:1.2rem}}
+/* hero */
+#inicio{background:var(--mid);min-height:100svh;padding-top:68px;display:flex;align-items:center;position:relative;overflow:hidden}
+#inicio .wrap{width:100%;display:grid;grid-template-columns:1.15fr .85fr;gap:3rem;align-items:center;padding-top:3rem;padding-bottom:3rem}
+.hero h1{font-size:clamp(2.8rem,8.2vw,7.2rem);font-weight:700;position:relative;display:inline-block}
+.hero h1 .l{display:block;clip-path:inset(0 100% 0 0);animation:wipe .9s cubic-bezier(.7,0,.2,1) forwards}
+.hero h1 .l:nth-child(2){animation-delay:.18s}.hero h1 .l:nth-child(3){animation-delay:.36s}
+.hero h1 .l:nth-child(3){color:var(--blue)}
+@keyframes wipe{to{clip-path:inset(0 0 0 0)}}
+.hero p{max-width:34ch;color:var(--silver);margin:1.8rem 0 2rem;font-size:1.2rem}
+.hero .cta{display:flex;flex-wrap:wrap;gap:.9rem}
+.hero-img{aspect-ratio:3/4;border-left:6px solid var(--blue);min-height:380px}
+.hero-img.ph{align-items:flex-end}
+@media(max-width:860px){#inicio .wrap{grid-template-columns:1fr}.hero-img{aspect-ratio:4/3;min-height:0}}
+/* about */
+#nosotros{background:var(--white);color:var(--mid);padding:clamp(5rem,10vw,9rem) 0}
+#nosotros .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(2rem,6vw,6rem)}
+#nosotros h2{font-size:clamp(2.4rem,5.5vw,5rem);font-weight:700}
+#nosotros p{max-width:46ch;margin:1.6rem 0 0;color:#2a3440}
+.about-img{aspect-ratio:4/5;position:relative;margin-top:3rem;margin-right:1.2rem}
+.about-img::after{content:"";position:absolute;right:-1.2rem;bottom:-1.2rem;width:35%;height:35%;border-right:5px solid var(--blue);border-bottom:5px solid var(--blue);pointer-events:none}
+.about-img.ph{background-color:var(--silver);color:var(--mid)}
+.about-img.ph span{color:var(--mid)}
+.about-l{align-self:start}
+@media(max-width:860px){#nosotros .wrap{grid-template-columns:1fr}.about-img{margin-top:0}}
+/* services */
+#servicios{background:var(--carbon);padding:clamp(5rem,10vw,9rem) 0}
+#servicios h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:500;color:var(--silver);margin-bottom:3rem;text-transform:none;letter-spacing:0}
+.svc{display:grid;grid-template-columns:1fr 280px;align-items:center;gap:2rem;border-top:1px solid rgba(220,227,234,.2);padding:2rem 0;transition:padding .3s}
+.svc:last-child{border-bottom:1px solid rgba(220,227,234,.2)}
+.svc h3{font-size:clamp(2.2rem,6.5vw,5.8rem);font-weight:700;transition:color .25s,transform .3s}
+.svc p{max-width:48ch;color:var(--silver);margin:1rem 0 0}
+.svc .ph{aspect-ratio:4/3;opacity:.55;transition:opacity .3s,transform .3s}
+.svc:hover h3,.svc:focus-within h3{color:var(--cyan);transform:translateX(.6rem)}
+.svc:hover .ph{opacity:1}
+@media(max-width:760px){.svc{grid-template-columns:1fr}.svc .ph{order:-1;aspect-ratio:16/9}}
+/* gallery */
+#trabajo{background:var(--black);padding:clamp(5rem,10vw,9rem) 0}
+.gh{display:flex;justify-content:space-between;align-items:flex-end;gap:2rem;flex-wrap:wrap;margin-bottom:2.5rem}
+#trabajo h2{font-size:clamp(2.6rem,7vw,6.5rem);font-weight:700}
+.ctrl{display:flex;gap:.6rem}
+.ctrl button{width:52px;height:52px;border:2px solid rgba(220,227,234,.35);background:none;color:#fff;font-size:1.3rem;cursor:pointer;border-radius:2px;transition:background .2s,border-color .2s}
+.ctrl button:hover{background:var(--blue);border-color:var(--blue)}
+.track{display:flex;gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 clamp(1.25rem,5vw,4rem) 1.5rem;scrollbar-width:thin;scrollbar-color:var(--blue) var(--carbon);align-items:flex-end}
+.track figure{margin:0;flex:none;scroll-snap-align:start}
+.track .ph{width:100%;height:100%}
+.track figcaption{font-size:.9rem;color:var(--silver);padding-top:.7rem}
+.f1{width:min(78vw,640px);height:min(60vh,520px)}
+.f2{width:min(60vw,360px);height:min(66vh,560px)}
+.f3{width:min(70vw,520px);height:min(44vh,380px)}
+.f4{width:min(60vw,380px);height:min(58vh,480px)}
+.f5{width:min(78vw,600px);height:min(52vh,440px)}
+.f6{width:min(64vw,420px);height:min(66vh,540px)}
+.track figure .box{transition:transform .5s}
+.track figure:hover .box{transform:translateY(-6px)}
+.track figure .box .ph{box-shadow:inset 0 -3px 0 var(--blue)}
+/* contact */
+#contacto{background:var(--white);color:var(--mid);padding:clamp(5rem,10vw,9rem) 0}
+#contacto h2{font-size:clamp(2.4rem,6.2vw,5.6rem);font-weight:700;max-width:14ch}
+.ct{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(2rem,6vw,6rem);align-items:end}
+.ct .btn{font-size:1.1rem;padding:1.25rem 2rem;margin-top:2rem}
+.ct .btn:hover{background:var(--mid);color:#fff;border-color:var(--mid)}
+dl{margin:0;border-left:5px solid var(--blue);padding-left:1.5rem}
+dt{font:700 1rem var(--hf);margin-top:1.2rem}dt:first-child{margin-top:0}
+dd{margin:.1rem 0 0;color:#2a3440}
+dd a{text-decoration-color:var(--blue);text-underline-offset:4px}
+@media(max-width:860px){.ct{grid-template-columns:1fr}}
+/* footer */
+footer{background:var(--black);padding:4rem 0 2.5rem;color:var(--silver);font-size:.95rem;border-top:1px solid rgba(220,227,234,.1)}
+footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2.5rem}
+footer p{margin:.8rem 0 0;max-width:36ch}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:.5rem}
+footer a{text-decoration:none}footer a:hover{color:var(--cyan)}
+.copy{grid-column:1/-1;border-top:1px solid rgba(220,227,234,.1);padding-top:1.5rem;font-size:.85rem;opacity:.7}
+@media(max-width:760px){footer .wrap{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.hero h1 .l{clip-path:none}}
+</style>
+</head>
+<body>
+<nav aria-label="Principal"><div class="wrap">
+<a class="logo" href="#inicio" aria-label="OPZ Auto Care, inicio"><b>OPZ</b><small>AUTO CARE</small></a>
+<button class="burger" aria-label="Abrir menú" aria-expanded="false" id="bg"><i></i><i></i></button>
+<div class="links" id="lk">
+<a href="#inicio">Inicio</a><a href="#nosotros">Nosotros</a><a href="#servicios">Servicios</a><a href="#trabajo">Nuestro Trabajo</a><a href="#contacto">Contacto</a>
+<a class="btn wa" href="https://wa.me/?text=Hola%20OPZ%20AUTO%20CARE%2C%20quiero%20reservar%20un%20servicio">Reservar</a>
+</div></div></nav>
+
+<header id="inicio" class="hero"><div class="wrap">
+<div>
+<h1><span class="l">Tu vehículo,</span><span class="l">como nuevo</span><span class="l">otra vez.</span></h1>
+<p>Recuperamos la limpieza y el aspecto de tu vehículo con atención a cada detalle.</p>
+<div class="cta"><a class="btn wa" href="https://wa.me/?text=Hola%20OPZ%20AUTO%20CARE%2C%20quiero%20reservar%20un%20servicio">Reservar por WhatsApp</a><a class="btn ghost" href="#trabajo">Conoce nuestro trabajo</a></div>
+</div>
+<div class="hero-img ph" data-slot="hero"><span>Foto real: lavado con espuma</span></div>
+</div></header>
+
+<section id="nosotros"><div class="wrap">
+<div class="about-l">
+<h2>Cuidamos tu auto por dentro y por fuera.</h2>
+<p>OPZ AUTO CARE es un negocio de limpieza de vehículos en Pilares Verdes, Las Cabras. Lavamos el exterior, limpiamos el interior y la tapicería, y devolvemos el aspecto de tu vehículo. Para reservar, escríbenos por WhatsApp.</p>
+</div>
+<div class="about-img ph" data-slot="about"><span>Foto real: trabajo en un vehículo</span></div>
+</div></section>
+
+<section id="servicios"><div class="wrap">
+<h2>Lo que hacemos</h2>
+<article class="svc"><div><h3>Lavado exterior</h3><p>Lavado con espuma y agua a presión, con limpieza de llantas y neumáticos incluida.</p></div><div class="ph" data-slot="s1"><span>Foto: exterior</span></div></article>
+<article class="svc"><div><h3>Limpieza interior</h3><p>Aspirado, limpieza del tablero y las superficies, y de alfombras y tapetes.</p></div><div class="ph" data-slot="s2"><span>Foto: interior</span></div></article>
+<article class="svc"><div><h3>Limpieza de tapicería</h3><p>Limpieza de asientos y tapizados para devolverles su aspecto.</p></div><div class="ph" data-slot="s3"><span>Foto: tapicería</span></div></article>
+</div></section>
+
+<section id="trabajo">
+<div class="wrap gh"><h2>Nuestro trabajo</h2>
+<div class="ctrl"><button id="pv" aria-label="Anterior">&larr;</button><button id="nx" aria-label="Siguiente">&rarr;</button></div></div>
+<div class="track" id="tr" tabindex="0" aria-label="Galería de trabajos, desplázate horizontalmente">
+<figure class="f1"><div class="box" style="height:100%"><div class="ph" data-slot="g1"><span>Foto real</span></div></div></figure>
+<figure class="f2"><div class="box" style="height:100%"><div class="ph" data-slot="g2"><span>Foto real</span></div></div></figure>
+<figure class="f3"><div class="box" style="height:100%"><div class="ph" data-slot="g3"><span>Foto real</span></div></div></figure>
+<figure class="f4"><div class="box" style="height:100%"><div class="ph" data-slot="g4"><span>Foto real</span></div></div></figure>
+<figure class="f5"><div class="box" style="height:100%"><div class="ph" data-slot="g5"><span>Foto real</span></div></div></figure>
+<figure class="f6"><div class="box" style="height:100%"><div class="ph" data-slot="g6"><span>Foto real</span></div></div></figure>
+</div>
+</section>
+
+<section id="contacto"><div class="wrap ct">
+<div><h2>Es momento de darle a tu auto el cuidado que merece.</h2>
+<a class="btn wa" href="https://wa.me/?text=Hola%20OPZ%20AUTO%20CARE%2C%20quiero%20agendar%20un%20servicio">Agenda tu servicio</a></div>
+<dl>
+<dt>OPZ AUTO CARE</dt><dd>Lavado interior y exterior</dd>
+<dt>Ubicación</dt><dd>Pilares Verdes, Las Cabras, Chile</dd>
+<dt>Reservas</dt><dd><a class="wa" href="https://wa.me/?text=Hola%20OPZ%20AUTO%20CARE">WhatsApp</a></dd>
+<dt>Instagram</dt><dd><a href="https://instagram.com/opzautocare" rel="noopener">@opzautocare</a></dd>
+</dl>
+</div></section>
+
+<footer><div class="wrap">
+<div><a class="logo" href="#inicio"><b>OPZ</b><small>AUTO CARE</small></a><p>Lavado interior y exterior, y limpieza de tapicería. Devolvemos el aspecto de tu vehículo.</p></div>
+<ul aria-label="Enlaces"><li><a href="#inicio">Inicio</a></li><li><a href="#nosotros">Nosotros</a></li><li><a href="#servicios">Servicios</a></li><li><a href="#trabajo">Nuestro Trabajo</a></li><li><a href="#contacto">Contacto</a></li></ul>
+<ul><li><a href="https://instagram.com/opzautocare" rel="noopener">Instagram</a></li><li><a class="wa" href="https://wa.me/">WhatsApp</a></li><li>Pilares Verdes, Las Cabras, Chile</li></ul>
+<div class="copy">© 2026 OPZ AUTO CARE. Todos los derechos reservados.</div>
+</div></footer>
+
+<script>
+// Reemplaza con el número real, formato internacional sin "+" ni espacios (ej. "569XXXXXXXX").
+var WA_NUMBER="";
+// Rutas de fotos reales por espacio (data-slot). Ej: {hero:"data:image/jpeg;base64,..."}
+var PHOTOS={};
+(function(){
+document.querySelectorAll(".wa").forEach(function(a){
+ if(!WA_NUMBER)return;
+ var u=a.getAttribute("href").replace("https://wa.me/","");
+ a.setAttribute("href","https://wa.me/"+WA_NUMBER+(u.charAt(0)==="?"?u:u.replace(/^\?/,"")));
+});
+document.querySelectorAll("[data-slot]").forEach(function(el){
+ var s=PHOTOS[el.getAttribute("data-slot")];
+ if(s){var i=new Image();i.src=s;i.alt="";i.loading="lazy";el.textContent="";el.appendChild(i);}
+});
+var bg=document.getElementById("bg"),lk=document.getElementById("lk");
+bg.addEventListener("click",function(){var o=lk.classList.toggle("open");bg.setAttribute("aria-expanded",o);});
+lk.addEventListener("click",function(e){if(e.target.tagName==="A"){lk.classList.remove("open");bg.setAttribute("aria-expanded","false");}});
+var tr=document.getElementById("tr");
+function mv(d){tr.scrollBy({left:d*Math.min(520,tr.clientWidth*.8),behavior:"smooth"});}
+document.getElementById("pv").onclick=function(){mv(-1)};
+document.getElementById("nx").onclick=function(){mv(1)};
+})();
+</script>
+</body>
+</html>

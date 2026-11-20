@@ -1,0 +1,84 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  background: rgba(5, 6, 7, 0.92);
+  padding-top: env(safe-area-inset-top, 0px);
+  border-bottom: 1px solid rgba(220, 227, 234, 0.1);
+}
+
+nav .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.links a {
+  text-decoration: none;
+  font-size: 0.95rem;
+  color: var(--silver);
+  transition: color 0.2s;
+}
+
+.links a:hover {
+  color: #fff;
+}
+
+.links .btn {
+  padding: 0.65rem 1.1rem;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+.burger {
+  display: none;
+  background: none;
+  border: 0;
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+
+.burger i {
+  display: block;
+  height: 2px;
+  background: #fff;
+  margin: 6px 10px;
+}
+
+@media (max-width: 860px) {
+  .burger {
+    display: block;
+  }
+
+  .links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--black);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem clamp(1.25rem, 5vw, 4rem) 2rem;
+    gap: 1.2rem;
+  }
+
+  .links.open {
+    display: flex;
+  }
+
+  .links a {
+    font-size: 1.2rem;
+  }
+}

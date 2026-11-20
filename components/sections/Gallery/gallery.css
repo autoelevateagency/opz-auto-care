@@ -1,0 +1,110 @@
+#trabajo {
+  background: var(--black);
+  padding: clamp(5rem, 10vw, 9rem) 0;
+}
+
+.gh {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+#trabajo h2 {
+  font-size: clamp(2.6rem, 7vw, 6.5rem);
+  font-weight: 700;
+}
+
+.ctrl {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.ctrl button {
+  width: 52px;
+  height: 52px;
+  border: 2px solid rgba(220, 227, 234, 0.35);
+  background: none;
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.ctrl button:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+.track {
+  display: flex;
+  gap: 1.2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0 clamp(1.25rem, 5vw, 4rem) 1.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--blue) var(--carbon);
+  align-items: flex-end;
+}
+
+.track figure {
+  margin: 0;
+  flex: none;
+  scroll-snap-align: start;
+}
+
+.track .ph {
+  width: 100%;
+  height: 100%;
+}
+
+.track figcaption {
+  font-size: 0.9rem;
+  color: var(--silver);
+  padding-top: 0.7rem;
+}
+
+.f1 {
+  width: min(78vw, 640px);
+  height: min(60vh, 520px);
+}
+
+.f2 {
+  width: min(60vw, 360px);
+  height: min(66vh, 560px);
+}
+
+.f3 {
+  width: min(70vw, 520px);
+  height: min(44vh, 380px);
+}
+
+.f4 {
+  width: min(60vw, 380px);
+  height: min(58vh, 480px);
+}
+
+.f5 {
+  width: min(78vw, 600px);
+  height: min(52vh, 440px);
+}
+
+.f6 {
+  width: min(64vw, 420px);
+  height: min(66vh, 540px);
+}
+
+.track figure .box {
+  transition: transform 0.5s;
+}
+
+.track figure:hover .box {
+  transform: translateY(-6px);
+}
+
+.track figure .box .ph {
+  box-shadow: inset 0 -3px 0 var(--blue);
+}

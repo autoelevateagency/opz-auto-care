@@ -1,0 +1,61 @@
+#contacto {
+  background: var(--white);
+  color: var(--mid);
+  padding: clamp(5rem, 10vw, 9rem) 0;
+}
+
+#contacto h2 {
+  font-size: clamp(2.4rem, 6.2vw, 5.6rem);
+  font-weight: 700;
+  max-width: 14ch;
+}
+
+.ct {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: clamp(2rem, 6vw, 6rem);
+  align-items: end;
+}
+
+.ct .btn {
+  font-size: 1.1rem;
+  padding: 1.25rem 2rem;
+  margin-top: 2rem;
+}
+
+.ct .btn:hover {
+  background: var(--mid);
+  color: #fff;
+  border-color: var(--mid);
+}
+
+dl {
+  margin: 0;
+  border-left: 5px solid var(--blue);
+  padding-left: 1.5rem;
+}
+
+dt {
+  font: 700 1rem var(--hf);
+  margin-top: 1.2rem;
+}
+
+dt:first-child {
+  margin-top: 0;
+}
+
+dd {
+  margin: 0.1rem 0 0;
+  color: #2a3440;
+}
+
+dd a {
+  text-decoration-color: var(--blue);
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 860px) {
+  .ct {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,26 +1,111 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --mid: #080b10;
+  --carbon: #111820;
+  --black: #050607;
+  --blue: #087ff5;
+  --cyan: #04b9f5;
+  --white: #f4f6f8;
+  --silver: #dce3ea;
+  --hf: var(--font-space-grotesk), system-ui, sans-serif;
+  --bf: var(--font-inter), system-ui, sans-serif;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+  height: auto;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: var(--black);
+  color: var(--white);
+  font: 400 1.0625rem / 1.6 var(--bf);
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--hf);
+  margin: 0;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+:focus-visible {
+  outline: 3px solid var(--cyan);
+  outline-offset: 3px;
+}
+
+.wrap {
+  padding: 0 clamp(1.25rem, 5vw, 4rem);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  font: 700 0.95rem var(--hf);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 1.6rem;
+  border: 2px solid var(--blue);
+  background: var(--blue);
+  color: #fff;
+  border-radius: 2px;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.btn:hover {
+  background: #fff;
+  color: var(--mid);
+  border-color: #fff;
+}
+
+.btn.ghost {
+  background: transparent;
+  border-color: rgba(244, 246, 248, 0.4);
+}
+
+.btn.ghost:hover {
+  border-color: #fff;
+  background: #fff;
+  color: var(--mid);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero h1 .l {
+    clip-path: none;
+  }
 }
